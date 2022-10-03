@@ -1,0 +1,19 @@
+services:
+  secretscanner-docker-extension:
+    image: alpine
+    command: ["sleep", "infinity"]
+
+  deepfence-yarahunter:
+    container_name: deepfence-yarahunter
+    image: yarahunter:latest
+    ulimits:
+      core: 1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+    entrypoint: /home/deepfence/usr/YaRadare
+    command: ["-config-path","/home/deepfence/usr", "-standalone-http-port", "8011"]
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1g"

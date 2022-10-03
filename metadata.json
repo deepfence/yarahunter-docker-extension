@@ -1,0 +1,19 @@
+{
+  "icon": "deepfence.svg",
+  "vm": {
+    "composefile": "docker-compose.yaml",
+    "exposes": {
+      "socket": "extension-yarahunter-docker-extension.sock"
+    }
+  },
+  "ui": {
+    "dashboard-tab": {
+      "title": "Yarahunter-Docker-Extension",
+      "src": "index.html",
+      "root": "ui",
+      "backend": {
+        "socket": "extension-yarahunter-docker-extension.sock"
+      }
+    }
+  }
+}
