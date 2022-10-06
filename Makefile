@@ -1,4 +1,4 @@
-IMAGE?=deepfence/yarahunter-docker-extension
+IMAGE?=deepfence/yarahunter-extension
 TAG?=latest
 
 BUILDER=buildx-multi-arch

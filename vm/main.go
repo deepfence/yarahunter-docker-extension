@@ -3,9 +3,9 @@ package main
 import (
 	"flag"
 	"log"
-	"net"
-	"net/http"
 	"os"
+	"yarahunter-extension/server"
+	"yarahunter-extension/server/handler"
 
 	"github.com/labstack/echo"
 	"github.com/sirupsen/logrus"
@@ -13,36 +13,25 @@ import (
 
 func main() {
 	var socketPath string
-	flag.StringVar(&socketPath, "socket", "/run/guest/volumes-service.sock", "Unix domain socket to listen on")
+	flag.StringVar(&socketPath, "socket", "/run/guest/plugin-yarahunter.sock", "Unix domain socket to listen on")
 	flag.Parse()
 
 	os.RemoveAll(socketPath)
-	
+
 	logrus.New().Infof("Starting listening on %s\n", socketPath)
 	router := echo.New()
 	router.HideBanner = true
 
 	startURL := ""
 
-	ln, err := listen(socketPath)
+	ln, err := server.Listen(socketPath)
 	if err != nil {
 		log.Fatal(err)
 	}
 	router.Listener = ln
 
-	router.GET("/hello", hello)
+	router.GET("/ping", server.PingHandler)
+	router.POST("/malware/scan", handler.YaraHunterScanHandler)
 
 	log.Fatal(router.Start(startURL))
-}
-
-func listen(path string) (net.Listener, error) {
-	return net.Listen("unix", path)
-}
-
-func hello(ctx echo.Context) error {
-	return ctx.JSON(http.StatusOK, HTTPMessageBody{Message: "hello"})
-}
-
-type HTTPMessageBody struct {
-	Message string
 }

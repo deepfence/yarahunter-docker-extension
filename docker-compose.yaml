@@ -1,11 +1,11 @@
+version: '3'
 services:
-  secretscanner-docker-extension:
-    image: alpine
-    command: ["sleep", "infinity"]
+  app:
+    image: ${DESKTOP_PLUGIN_IMAGE}
 
   deepfence-yarahunter:
     container_name: deepfence-yarahunter
-    image: yarahunter:latest
+    image: deepfenceio/yara-hunter:harsh-dev
     ulimits:
       core: 1
     volumes:

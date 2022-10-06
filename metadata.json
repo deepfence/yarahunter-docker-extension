@@ -1,5 +1,7 @@
 {
   "icon": "deepfence.svg",
+  "name": "Deepfence YaraHunter",
+  "provider": "Deepfence",
   "vm": {
     "composefile": "docker-compose.yaml",
     "exposes": {
@@ -8,7 +10,7 @@
   },
   "ui": {
     "dashboard-tab": {
-      "title": "Yarahunter-Docker-Extension",
+      "title": "Yarahunter",
       "src": "index.html",
       "root": "ui",
       "backend": {
