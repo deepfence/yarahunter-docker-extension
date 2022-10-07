@@ -69,7 +69,6 @@ export function App() {
             .then((result: any) => {
                 let r: response = JSON.parse(JSON.stringify(result))
                 let q: message = JSON.parse(r.Message)
-                console.log('result', JSON.stringify(result))
                 setResponse(q.IOC);
                 ddClient.desktopUI.toast.success('Secret scanning finished!');
                 setLoading(false)

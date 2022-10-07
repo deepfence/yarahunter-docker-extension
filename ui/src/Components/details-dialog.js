@@ -17,7 +17,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function FullScreenDialog(props) {
     const { open, handleClose, row } = props
-    console.log('row', row)
     return (
         <Dialog
             fullScreen
