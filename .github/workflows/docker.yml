@@ -1,0 +1,26 @@
+name: Docker Series Builds
+
+on: [push , pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: docker login
+      env:
+        DOCKER_USER: ${{ secrets.DOCKER_USER }}   
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - name: docker build deepfence-yarahunter
+      run: |
+        docker build ./vm -t deepfenceio/yara-hunter:harsh-dev
+    - name: docker build app
+      run: |
+        docker build ./ui -t ${DESKTOP_PLUGIN_IMAGE}
+    - name: docker push
+      run: |
+        docker push ${DESKTOP_PLUGIN_IMAGE}
+        docker push deepfenceio/yara-hunter:harsh-dev
+      
