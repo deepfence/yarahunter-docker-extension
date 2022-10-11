@@ -21,7 +21,9 @@ Enable Docker Extensions
 <img width="1376" alt="image" src="https://user-images.githubusercontent.com/18168330/194485514-4991ccee-15a4-4df4-b407-c57a2a77d372.png">
 
 
-DEVELOPMENT
+
+## DEVELOPMENT
+
 
 Enable hot reloading
 
