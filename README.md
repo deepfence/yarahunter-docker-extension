@@ -28,10 +28,13 @@ Setting up a new developer machine can be time consuming and tricky. The given s
  docker extension dev reset john/my-extension
 ## Insider Preview
 
-<img width="1377" alt="image" src="https://user-images.githubusercontent.com/94823997/195155529-81fc52c8-e9ee-455e-b067-cba851619743.png>
+<img width="1377" alt="image" src="(https://user-images.githubusercontent.com/94823997/195160081-c939db84-3e17-458b-bc73-3c772a5e9534.png)
+
                                    
 2. enable hot reloading: to use local ui code without rebuilding
    ## Insider Preview
-  <img width="1376" alt="image" src="https://user-images.githubusercontent.com/94823997/195155189-f4b87816-aef9-410b-9008-5ec88da98996.png>                                
+  <img width="1376" alt="image" src="[enable hot reloading](https://user-images.githubusercontent.com/94823997/195160215-1d28d9af-cffe-4945-b33f-df41cf6582f2.png)
+
+                             
   
 ref: https://www.docker.com/blog/build-your-first-docker-extension/
