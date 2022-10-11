@@ -34,8 +34,6 @@ npm start
 docker extension dev ui-source deepfenceio/yarahunter-extension http://localhost:3000
                                    
 
-## Insider Preview
-<img width="1376" alt="image" src="https://user-images.githubusercontent.com/94823997/195160215-1d28d9af-cffe-4945-b33f-df41cf6582f2.png">
   
   
 Open Chrome Dev Tools
@@ -48,9 +46,7 @@ Each subsequent click on the extension tab will also open Chrome Dev Tools. To s
 
 docker extension dev reset deepfenceio/yarahunter-extension
 
- ## Insider Preview
 
-<img width="1377" alt="image" src="https://user-images.githubusercontent.com/94823997/195160081-c939db84-3e17-458b-bc73-3c772a5e9534.png">
 
 
 Change the backend service code
