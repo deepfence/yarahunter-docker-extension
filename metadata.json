@@ -10,7 +10,7 @@
   },
   "ui": {
     "dashboard-tab": {
-      "title": "Yarahunter",
+      "title": "YaraHunter",
       "src": "index.html",
       "root": "ui",
       "backend": {

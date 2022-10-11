@@ -5,7 +5,7 @@ services:
 
   deepfence-yarahunter:
     container_name: deepfence-yarahunter
-    image: deepfenceio/yara-hunter:harsh-dev
+    image: deepfenceio/yara-hunter:latest
     ulimits:
       core: 1
     volumes:
