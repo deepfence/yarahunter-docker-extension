@@ -15,7 +15,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: docker build deepfence-yarahunter
       run: |
-        docker build ./vm -t deepfenceio/yara-hunter:harsh-dev
+        docker build ./vm -t deepfenceio/yara-hunter:latest
     - name: docker build app
       run: |
         docker build ./ui -t ${DESKTOP_PLUGIN_IMAGE}
