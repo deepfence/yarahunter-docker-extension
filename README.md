@@ -24,8 +24,7 @@ Enable Docker Extensions
 
 ## DEVELOPMENT
 
-
-Enable hot reloading
+## Enable hot reloading
 
 cd ui
 
@@ -35,8 +34,7 @@ docker extension dev ui-source deepfenceio/yarahunter-extension http://localhost
                                    
 
   
-  
-Open Chrome Dev Tools
+## Open Chrome Dev Tools
   
 In order to open the Chrome Dev Tools for your extension when clicking on the extension tab, run:
 
@@ -48,9 +46,8 @@ docker extension dev reset deepfenceio/yarahunter-extension
 
 
 
+## Change the backend service code
 
-Change the backend service code
- 
  make build-extension
     
  make update-extension                            
