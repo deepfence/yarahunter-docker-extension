@@ -28,7 +28,9 @@ Enable Docker Extensions
 Enable hot reloading
 
 cd ui
+
 npm start
+
 docker extension dev ui-source deepfenceio/yarahunter-extension http://localhost:3000
                                    
 
