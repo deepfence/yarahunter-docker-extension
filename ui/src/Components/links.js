@@ -10,16 +10,16 @@ export default function Links() {
                 label="deepfence/YaraHunter"
                 variant="outlined"
                 component="a"
-                href="https://github.com/deepfence/YaraHunter"
                 target="_blank"
+                href="https://github.com/deepfence/YaraHunter"
                 clickable
             />
             <Chip icon={<GitHub />}
                 label="deepfence/ThreatMapper"
                 variant="outlined"
                 component="a"
+                target="_blank"
                 href="https://github.com/deepfence/ThreatMapper"
-                target="_top"
                 clickable
             />
         </Stack>
