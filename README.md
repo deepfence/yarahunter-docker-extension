@@ -38,7 +38,6 @@ Setting up a new developer machine can be time consuming and tricky. The given s
  3. Change the backend service code by the following steps
  
     make build-extension
-    
     make update-extension                            
   
 ref: https://www.docker.com/blog/build-your-first-docker-extension/
