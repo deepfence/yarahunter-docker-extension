@@ -1,5 +1,7 @@
 # YaraHunter Docker Extension
 
+![CodeQL](https://github.com/deepfence/yarahunter-docker-extension/workflows/CodeQL/badge.svg)
+
 ## How to install in Docker Desktop ?
 *Note: Method to install this extension will change once SecretScanner extension is approved and published by Docker team*
 
@@ -24,32 +26,30 @@ Enable Docker Extensions
 
 ## DEVELOPMENT
 
-## Enable hot reloading
-
+### Enable hot reloading
+```
 cd ui
-
 npm start
-
 docker extension dev ui-source deepfenceio/yarahunter-extension http://localhost:3000
-                                   
+```                                
 
-  
-## Open Chrome Dev Tools
+### Open Chrome Dev Tools
   
 In order to open the Chrome Dev Tools for your extension when clicking on the extension tab, run:
 
-docker extension dev deepfenceio/yarahunter-extension
+`docker extension dev deepfenceio/yarahunter-extension`
 
 Each subsequent click on the extension tab will also open Chrome Dev Tools. To stop this behavior, run:
 
-docker extension dev reset deepfenceio/yarahunter-extension
+`docker extension dev reset deepfenceio/yarahunter-extension`
 
 
 
-## Change the backend service code
+### Change the backend service code
 
- make build-extension
-    
- make update-extension                            
-  
+```
+make build-extension
+make update-extension                            
+```
+
 ref: https://www.docker.com/blog/build-your-first-docker-extension/
